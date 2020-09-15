@@ -8,84 +8,101 @@ This plan is inspired by the following [Data Management Plan](https://healthscie
 
 # Overview
 
-Project Title:
+Project Title: AI-Box
 
 ## Main researcher: 
-*Researcher in charge of producing the code*
+Emil Blixt Hansen
 
 ## Research leader: 
-*Closest researcher leader overseeing the researcher. Could be the main researcher.*
+*Not relevant*
 
 ## Collaborators: 
-*Other researchers etc. that will have access and use the code*
+My Supervisor - Simon Bøgh
 
 ## Project contact: 
-*Email of main researcher and research leader. Should also include name and contact for a person in-charge after the project ends if relevant*
+Main researcher and main contact: 
+* Emil Blixt Hansen - [ebh@mp.aau.dk](mailto:ebh@mp.aau.dk)
+
+Collaborator:
+* Simon Bøgh - [sb@mp.aau.dk](mailto:sb@mp.aau.dk)
 
 ## Related document(s): 
-
-Are there requirements and policies from funding agency, collaborators or institute when conducting the research? 
+There are no external institution/organisation/etc. that have influence on the work and the results.
 
 # Planning the project
 
 ## Purpose
-*What is the purpose the scientific software? What scientific question are you trying to answer? What scientific methodology will be used?*
+The software program AI-Box aims to bring some Industry 4.0 technologies down the Small and Medium-sized Enterprises (SMEs). 
+The main technologies is Machine Learning and IoT focused on image data and time-series data.
+Currently the main research of these technologies in Industrial context is focused on the larger enterprises with the resources and knowledge to invest in it.
+Therefore, this research is conducted on how to make the technologies more available to the SMEs without them needing software engineers and data scientist to utilise them.
 
 ## Where will code exist during project?: 
-*Can collaborators access code? How? Will there be backup?*
+The code is currently stored on [BitBucket](https://bitbucket.org/) through git version control.
 
 ## Software development: 
-*How will the software be developed? Following a formal guideline or ad-hoc? Will you receive peer-review of code? How will you track bugs and issues? How do you ensure your results are trustworthy?*
+The software is mostly developed ad-hoc, based on the what is discovered in the literature and interviews with relevant SMES.
+Since this is a signal man PhD study, the main code is developed by me and thus resources are limited. 
+However, everytime an issue is discovered an issue is created at BitBucket and is managed through it. 
+With every generated result the results is carefully reviewed by myself and if I discover something I will being in my supervisor. 
 
 ## Programming languages:
-*Which languages will you use and why? Will you automate using scripts? Will you use Integrated Development Environments? To which extend will your toolchain be available to others and will it be free of cost? Literate programming? Is platform dependencies an issue? Coding style?*
+The program is mainly written in python 3.6 for the quick prototyping and development along with all the data science modules.
+The program is a fairly large Django webapp project with certain dependencies, therefore a installation bash script has been created to install the requirements and setup the environment.
+Since it is written in Python the code styling is following the PEP8 syntax, with much help from PyCharm built in checker.
 
 ## Methods: 
-*Which statistical methods are used? To which extend do you need to develop your own methods? To which extend can you use off-the-shell methods?* 
+The methods is neural networks and is mainly custom implementation based on well known networks.
 
 ## Code Documentation: 
-*How will the code be documented? A single README? Documentation level of individual functions and scripts? Will it be possible and useful to have automatic generation of documentation?*
+A single README is present with covers the main aspect of the program. Moreover, every method and class in the project as a docstring description.
+It would be possible to automate a reference documentation site, since all the docstrings are following the standards.
 
 ## Testing: 
-*How will the software be tested? Will there be automatic testing? What can be tested? Systematic or ad-hoc testing? Can we test intermediate results and how? Can you compare with similar software?* 
+A testing plan is in place which is a unit test with pytest. Currently the coverage is only on 29%. 
+However, everytime a push is made to the development and master branch an automated test is generated. 
+Which also generates a coverage file and badge.  
 
 ## Validation: 
-*To which extend is validation possible? From theory, do we know if some approaches are better/worse under a given metric and can we do the comparison?
-Is it possible to simulate following a specific model where known theoretical bounds must apply? Is it possible to simplify the model (no noise, fewer parameters, etc.) into a model where the expected result is more clear? In general, how do you ensure your results are trustworthy?*
+It is given that validation of the model is needed. Since the models are custom implementation trying to reduce the amount of parameters and size, it needs to be validated.
+Validation is following the norm of machine leaning with a testing set that the mode has never seen before.
 
 ## Code and data: 
-*How will code and data be structured in a filesystem? Are data too large to reside in e.g. a version control system? Are data so large it will reside on a different system, e.g. in a database server? Are there political, legal or ethical issues involved? What plan do you have for organization and naming ?*
+All the large files such as pretrained models weights (which can exceed 100MB) and testing images are stored in Git Large File Storage (LFS).
+Moreover, runtime generated data such as log files, temporary files and database instances is excluded from Git through .gitignore.
 
 ## Version control: 
-*Manually or by a version control system? Which system and why?*
+As stated it is version controlled through git with BitBucket. The reason behind BitBucket is that our research group (at the time) pro license for private repositories; 
+However, with the reason changes to GitHub this is no longer a requirement to use BitBucket.  
 
 # Processing data
 
 ##  Will you processing include randomness?: 
-*Can your results be reproduced? Is it beneficial to save seed? Is it okay to approximately reproduce?*
+Since I work with neural networks and with small amount of data randomness is a requirement for augmentation of data and model initialisation.
+However, all randomness function is being seeded and inorder to compare models and changes to models.
 
 ## Cleaning of data: 
-*Is it necessary to pre-process data? Which methods are used? How are pre-processing documented? How do you ensure that the pre-processing is done in a transparent manner?*
+Currently only image data is being used, and thus the main preprocessing is converting it to a ndarray and normalise the images between 0-1.
+Moreover, augmentation to the data is also performed (e.g. blur, zoom, crop). This is done to enforce the learning and is documented both in a paper and in code.
 
 ## Multiple steps?: 
-*Is it necessary to perform several steps to obtain the results? Is it possible to automate via scripting?*
+No, only the installation as mentioned
 
 # Sharing
 ## Will you share your code? 
-*If so, in which format? Binary/bytecode and/or source? Who are the intended users? What are knowledge and skills do potential users have? What level of support do you offer? How do users now the level of support? Contact information? How will you measure	the level of usage? Should users cite a publication?*
+Currently it is in a private repository, so no.
 
 ## Which publication channel? 
-*Publisher: home university platform (AAU: e.g. vbn.aau.dk), publisher, or independent organization (e.g. figshare, github,...)? DOI? Link between article and code? Is the policies of digital repository acceptable? Is the longitude? Does the platform accommodate the size of you project? Fees?*
+Currently there is no direct hyperlink between the published articles and the BitBucket repository, mainly because it is private.
 
 ## Who should have access and who will govern access?
-*Should there be restricted access? Which criteria should be meet for sharing? Who will govern access after completion of project? Does the platform of choice allow for access governance?*
+Only relevant parties should have access and it is governed by me.
 
 ## Documentation 
-*Is the paper/article sufficient documentation? Should dependencies to other programs and record and versions of these be documented? Is it documented how to produce every figure and statistics reported in the article? Should documentation include how-to-get-started? Example of how run all the program and scripts? Are examples useful?*
+More documentation besides the README, articles and docstring is very beneficial, sadly time is a constrain hence little effort is put into expanding the decimation.
 
 ## Dataset documentation and publication: 
-*Will you publish any dataset? Is it necessary to document the dataset? Does it make sense to adapt the FAIR principles for your data (benefits/)?:*
+There is a plan to publish a dataset of machine data from an industrial partner company and FAIR is defiantly being investigated to be used for it to make it more available to other researches.
 
 ## Licensing 
-*Should be clearly stated at the top of all relevant files. Right to copy? Right to modify? Right to distribute? Right to usage in proprietary and commercial software?*
-
+Currently the license is distributed by me since it is a closed project therefore there is only license to use and modify on a per user basis.
