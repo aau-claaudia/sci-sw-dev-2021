@@ -7,34 +7,46 @@ The texts in italic is inserted to provide guidance. Some parts may not be valid
 This plan is inspired by the following [Data Management Plan](https://healthsciences.ku.dk/research/responsible-conduct-of-research/SUND_Data_Management_Plan_Template_Final.docx/SUND_Data_Management_Plan_Template_Final.docx) and [Software Management Plan](https://doi.org/10.5281/zenodo.2159713)
 
 # Overview
-
-Project Title:
+Project Title: Start-up of new Anaerobic Digester at Mariagerfjord Vand A/S
 
 ## Main researcher: 
-*Researcher in charge of producing the code*
+Anne-Kirstine Corfitz Petersen (akc@bio.aau.dk)
 
 ## Research leader: 
-*Closest researcher leader overseeing the researcher. Could be the main researcher.*
+Per Halkjær Nielsen (phn@bio.aau.dk)
 
 ## Collaborators: 
-*Other researchers etc. that will have access and use the code*
+Chenjing Jiang (chj@bio.aau.dk)
+
+Miriam Peces Gomez (mpg@bio.aau.dk)
+
+Marta Anna Nierychlo (mni@bio.aau.dk)
 
 ## Project contact: 
-*Email of main researcher and research leader. Should also include name and contact for a person in-charge after the project ends if relevant*
+Main contactperson: Per Halkjær Nielsen (phn@bio.aau.dk)
+
+Contactperson: Anne-Kirstine Corfitz Petersen (akc@bio.aau.dk)
+
+Contactperson in-charge after the project ends: Marta Anna Nierychlo (mni@bio.aau.dk)
 
 ## Related document(s): 
-
 Are there requirements and policies from funding agency, collaborators or institute when conducting the research? 
+- Not relevant
 
 # Planning the project
 
 ## Purpose
-*What is the purpose the scientific software? What scientific question are you trying to answer? What scientific methodology will be used?*
+R and R-studio will be used to visulise the changes/variations in the microbial community doing the start-up of a nye anaerobic digester. 
+The digester wil have a known starter culture tranferred from the old digester into the new digester and as a new substrate primary sludge will be added together with activated sludge. 
+Bioinformatic will in the software be used to investigate correlation between forinstance substrate change and shifts in the microbial commmunity. 
 
 ## Where will code exist during project?: 
-*Can collaborators access code? How? Will there be backup?*
+The code will exist on a locale computer and back-up will frequently be made to the online AAU cloud or OneDrive, depending on the content. 
+Also the code will be uploaded to a private git resporatory and collaborates can get acess, after request, to look/edit (due to purpose).  
 
-## Software development: 
+## Software/script development: 
+Scripts are made in R-markdown making it possible to have explanations in the code. 
+Collaboraters will look through the code to find errors and 
 *How will the software be developed? Following a formal guideline or ad-hoc? Will you receive peer-review of code? How will you track bugs and issues? How do you ensure your results are trustworthy?*
 
 ## Programming languages:
