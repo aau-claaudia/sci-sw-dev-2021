@@ -46,58 +46,65 @@ Also the code will be uploaded to a private git resporatory and collaborates can
 
 ## Software/script development: 
 Scripts are made in R-markdown making it possible to have explanations in the code. 
-Collaboraters will look through the code to find errors and 
-*How will the software be developed? Following a formal guideline or ad-hoc? Will you receive peer-review of code? How will you track bugs and issues? How do you ensure your results are trustworthy?*
+Collaboraters will be involved if issue occure in the code and are to help troubleshoote and resolve problems. They will look through the code to check for errors and make sure information/explanations in the code are sufficient.  
 
 ## Programming languages:
-*Which languages will you use and why? Will you automate using scripts? Will you use Integrated Development Environments? To which extend will your toolchain be available to others and will it be free of cost? Literate programming? Is platform dependencies an issue? Coding style?*
+The programming language used will mainly be R. 
+This is the most used software in my the department and often used in this scientific field. 
+
+If the project leads to publication of results in articles will the scipts be avalible on git free of cost. 
 
 ## Methods: 
-*Which statistical methods are used? To which extend do you need to develop your own methods? To which extend can you use off-the-shell methods?* 
+The basic data analysis will build on methods which has been used previusly. For more advanced or in depth analysis inspiration to methods will be found i newer (less than 3 years old) articles and modified to the data. 
+
+Methods used will among others be: Heatmap, boxplots, PCA plot, Timeserie visualisation (abundance vs time), P-values, correlation investigations etc.. 
 
 ## Code Documentation: 
-*How will the code be documented? A single README? Documentation level of individual functions and scripts? Will it be possible and useful to have automatic generation of documentation?*
+The code will be documented in a Readme file and with explanatory comments in the code. 
 
 ## Testing: 
-*How will the software be tested? Will there be automatic testing? What can be tested? Systematic or ad-hoc testing? Can we test intermediate results and how? Can you compare with similar software?* 
+The "testthat" package for R can help catching errors and issues (https://testthat.r-lib.org/). 
+I have not yet used this package and need to find out how to implement it. The hope is that this pakage can help find code parts not working and save time trouble shooting the code.  
 
-## Validation: 
+## Validation:
+- Not relevant
 *To which extend is validation possible? From theory, do we know if some approaches are better/worse under a given metric and can we do the comparison?
 Is it possible to simulate following a specific model where known theoretical bounds must apply? Is it possible to simplify the model (no noise, fewer parameters, etc.) into a model where the expected result is more clear? In general, how do you ensure your results are trustworthy?*
 
 ## Code and data: 
-*How will code and data be structured in a filesystem? Are data too large to reside in e.g. a version control system? Are data so large it will reside on a different system, e.g. in a database server? Are there political, legal or ethical issues involved? What plan do you have for organization and naming ?*
+The code would probably be divieded in two files. One for the bacteria and one for the archaea, bacause these have induvidual big dataset, and the software can be slower and the code chaotic if there is to much data and different datasets. 
+Due to naming everything refering to bacteria will be marked with a "B" and all refering to archaea will be marked with an "A". 
 
 ## Version control: 
-*Manually or by a version control system? Which system and why?*
+Version control in git gives a very nice overview of the process. You can both make you code directly or upload the file to git. This way it is also possible for collaborators to follow you work and constibute to it. If errors occur or old code are needed, it is easy to go back to previously versions and gab the needed parts. 
+You files are also stored online which makes it easy to find no matter where you are and which computer you use. This is also a safety if your computer break down. 
 
 # Processing data
 
 ##  Will you processing include randomness?: 
-*Can your results be reproduced? Is it beneficial to save seed? Is it okay to approximately reproduce?*
+The statistics and figures would be reproduceble because no randomness is used in the dataanalyses. 
 
 ## Cleaning of data: 
-*Is it necessary to pre-process data? Which methods are used? How are pre-processing documented? How do you ensure that the pre-processing is done in a transparent manner?*
+Samples with less than 2000 reads are removed from the dataset as a quality control. This is done as the first step after data are loaded into the script. These samples are removed because they cannot be trusted to show a reliable picture of the microbial community. 
 
 ## Multiple steps?: 
-*Is it necessary to perform several steps to obtain the results? Is it possible to automate via scripting?*
+If the needed data are avaible and correct loaded in the software/script it should be possible to run the whole code and get the desired results and figures. 
 
 # Sharing
 ## Will you share your code? 
-*If so, in which format? Binary/bytecode and/or source? Who are the intended users? What are knowledge and skills do potential users have? What level of support do you offer? How do users now the level of support? Contact information? How will you measure	the level of usage? Should users cite a publication?*
+If the article made from the data is avalible as open acess, is it relevant to share the code for analysis aswell. This would be done as R-markdown files in a git repositorie. The intended users are those interested in the article or those also working with investigation of microbial communitues in closed systems. The potential users would need a basic knowledge to R and coding in R to use the code avalible. No level of support would be offered, which is why the comments and explanations in the code should be sufficient. The article should be cited if the code or part of the code is uded directly. Contact information would be given in hte article for which the code belongs. 
 
 ## Which publication channel? 
-*Publisher: home university platform (AAU: e.g. vbn.aau.dk), publisher, or independent organization (e.g. figshare, github,...)? DOI? Link between article and code? Is the policies of digital repository acceptable? Is the longitude? Does the platform accommodate the size of you project? Fees?*
+The article schould be avaible at AAU platform (vbn.aau.dk) and be publiched in relevant open acess journals. The article will include a refence to the github where code would be avalible. The article should when publisehed have a DOI to make easy acesseble, findable, and refereble.  
 
 ## Who should have access and who will govern access?
-*Should there be restricted access? Which criteria should be meet for sharing? Who will govern access after completion of project? Does the platform of choice allow for access governance?*
+The raw data should have restricted access and only be shared if the person requenting acess meet specific criteria such as collaboration with the AAU and maybe even collatoration with EB group on AAU. It should not be possible to use the dataset for own reseach without the AAU accept. The code should be avalible so people can midify it to their own data as long as the authors are credited.  
 
 ## Documentation 
-*Is the paper/article sufficient documentation? Should dependencies to other programs and record and versions of these be documented? Is it documented how to produce every figure and statistics reported in the article? Should documentation include how-to-get-started? Example of how run all the program and scripts? Are examples useful?*
+The Readme file for the code should include information on the software used and version, aswell as the packages needed to run the code and the version of these. 
 
 ## Dataset documentation and publication: 
-*Will you publish any dataset? Is it necessary to document the dataset? Does it make sense to adapt the FAIR principles for your data (benefits/)?:*
+The raw dataset should not be public avalible, but it would be possible to contact the project responsible person and ask for permission to see and use the dataset under the CC-BY license. The data, metadata, and scipts should follow the Fair principles to some extent. It should be tidy and easy to use for both collaborators, colleagause, future you etc., but not everything should be acceseble without permission.
 
 ## Licensing 
-*Should be clearly stated at the top of all relevant files. Right to copy? Right to modify? Right to distribute? Right to usage in proprietary and commercial software?*
-
+All files and data avalible should be protected by the CC-BY license. 
