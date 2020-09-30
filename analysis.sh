@@ -1,15 +1,16 @@
 #!/bin/bash
 
 #DESCRIPTION
-#	Script for analyzing the distribution of different ids in different cases from the European Court of Human Rights.
-#	The system uses a kpthesaurus approach, where each case is tagged with ids taht corresponds to different keywords in a vocabularium.
-#	The script will produce a .dat file containing case numbers with their associated ids and a distribution plot. 
-#	The script depends on two subscripts to work: print_kpthesaurus.py and analyse_and_visualize.r
-#	The script expects a directory of data with case files in the format {casenumber.json}
+#Script for analyzing the distribution of different ids in different cases from the European Court of Human Rights.
+#The system uses a kpthesaurus approach, where each case is tagged with ids taht corresponds to different keywords in a vocabularium.
+#The script will produce a .dat file containing case numbers with their associated ids and a distribution plot. 
+#The script depends on two subscripts to work: print_kpthesaurus.py and analyse_and_visualize.r
+#The script expects a directory of data with case files in the format {casenumber.json}
 
 #IMPLEMENTATION 
 #	author Emil Sørensen (easo@bio.aau.dk)
-#		   Tobias Jensen (tlj@its.aau.dk)
+#	       Tobias Jensen (tlj@its.aau.dk)
+#	       Thomas Aarildsen (tari@its.aau.dk)
 
 
 #TO DO
