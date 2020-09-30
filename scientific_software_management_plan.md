@@ -8,84 +8,86 @@ This plan is inspired by the following [Data Management Plan](https://healthscie
 
 # Overview
 
-Project Title:
+Project Title: High accuracy long-read amplicon characterization of microbial rRNA operon genes
 
 ## Main researcher: 
-*Researcher in charge of producing the code*
+Emil Aarre Sørensen
 
 ## Research leader: 
-*Closest researcher leader overseeing the researcher. Could be the main researcher.*
+Mads Albertsen and Søren Karst
 
 ## Collaborators: 
-*Other researchers etc. that will have access and use the code*
+Søren Karst
 
 ## Project contact: 
-*Email of main researcher and research leader. Should also include name and contact for a person in-charge after the project ends if relevant*
+Main researcher: easo@bio.aau.dk
+Research leader: ma@bio.aau.dk, smk@bio.aau.dk
 
 ## Related document(s): 
-
-Are there requirements and policies from funding agency, collaborators or institute when conducting the research? 
+None
 
 # Planning the project
 
 ## Purpose
-*What is the purpose the scientific software? What scientific question are you trying to answer? What scientific methodology will be used?*
+Modifying, using and maintaining the longread_umi software by smk for alternative UMI-labeling approaches, allowing for less biased amplicon generation. 
+The main goal of the project is to develop an approach for unbiased amplification of rRNA genes in prokaryotes and eukaryotes while utilizing unique molecular identifiers to drastically increase the quality of the sequenced reads. 
 
 ## Where will code exist during project?: 
-*Can collaborators access code? How? Will there be backup?*
+On local servers and git.hub
 
 ## Software development: 
-*How will the software be developed? Following a formal guideline or ad-hoc? Will you receive peer-review of code? How will you track bugs and issues? How do you ensure your results are trustworthy?*
+The software will most likely be developed ad-hoc with in house quality check as the protocol develops. When the protocol is finalized a more formal addition to the software is planned. The software will be validated on well known data originating from a bacterial mock community with the ground truth already being known. 
 
 ## Programming languages:
-*Which languages will you use and why? Will you automate using scripts? Will you use Integrated Development Environments? To which extend will your toolchain be available to others and will it be free of cost? Literate programming? Is platform dependencies an issue? Coding style?*
+From an application perspective simple scripting with common bash languages utlizing the developed pipeline to treat data from thousands of samples.
+In development likewise common unix/shell langauges for bash scripting e.g. gawk, sed, etc. Potentially also python but only to a lesser extend, as the ground work already have been developed. Dependencies should not be an issue, at least for the moment but need to controlled regularly. 
 
 ## Methods: 
-*Which statistical methods are used? To which extend do you need to develop your own methods? To which extend can you use off-the-shell methods?* 
+I will mainly be using already developed methods, modifying these to my needs. 
 
 ## Code Documentation: 
-*How will the code be documented? A single README? Documentation level of individual functions and scripts? Will it be possible and useful to have automatic generation of documentation?*
+Well documented in a README, but also documentation of individual script. Likewise, there will be example data and examples on how to utilize the software.
 
 ## Testing: 
-*How will the software be tested? Will there be automatic testing? What can be tested? Systematic or ad-hoc testing? Can we test intermediate results and how? Can you compare with similar software?* 
+The software will be tested on both old and new sequencing data of ensuring any modifications in either the laboratory protocol or the software does not comprimise the results. This will have to be done manually/ad-hoc as the protocols changes. Quality controls steps are already included in the software ensuring the results have biological meaning. E.g. identifying issuses as tandem reads and strand bias together with stringent filtering. 
 
 ## Validation: 
-*To which extend is validation possible? From theory, do we know if some approaches are better/worse under a given metric and can we do the comparison?
-Is it possible to simulate following a specific model where known theoretical bounds must apply? Is it possible to simplify the model (no noise, fewer parameters, etc.) into a model where the expected result is more clear? In general, how do you ensure your results are trustworthy?*
+We have a seperate qc-pipeline to investigate/validate the results, such as error-rate, UMI-coverage and how large a fraction of the input data is utilized. Furthermore, quality controls steps are already included in the software ensuring the results have biological meaning. E.g. identifying issuses as tandem reads and strand bias together with stringent filtering. Continuous validation and testing is nescassary as the software stil can be optimized increaseing the yield compared to the input, as well as speeding up the process. Furthermore, changes in basecalling and/or flowcell type for Nanopore data can have drastical effects of the results. At the moment this influences parameters that needs to be determined emperically, with guidelines/defaults being specified in the software based on our experience. 
 
 ## Code and data: 
-*How will code and data be structured in a filesystem? Are data too large to reside in e.g. a version control system? Are data so large it will reside on a different system, e.g. in a database server? Are there political, legal or ethical issues involved? What plan do you have for organization and naming ?*
+The current version of the code are structued and available via git with continous development on local servers is a somewhat structured filesystem. New addition to the code that have not been fully investigated are available via git as a development version to be used at own risk. The software is meant to process large amount of sequencing data stored in database servers. A smaller example dataset is available on git together with the software enabling users to validate their usage of the software. 
 
 ## Version control: 
-*Manually or by a version control system? Which system and why?*
+Version control via git, for easy open-acces sharing of the software. Additionally git is commenly used in our research area making it easier for other researchers to utilize. 
+The open source code in git likewise make it easy for fellow researchers to comment, request and understand the code.  
 
 # Processing data
 
 ##  Will you processing include randomness?: 
-*Can your results be reproduced? Is it beneficial to save seed? Is it okay to approximately reproduce?*
+The results can not be be reproduced (unless using the exact same version of the software and the exact same input data), as biological differences and laboratory obstacles in producing the data makes it impossible for two datasets to produce the exact same result.
 
 ## Cleaning of data: 
-*Is it necessary to pre-process data? Which methods are used? How are pre-processing documented? How do you ensure that the pre-processing is done in a transparent manner?*
+Data does not need to be pre-processed, however, the user have to pay attention to the type of sequencing data that should be processed (e.g. PacBio data, Nanopore data, basecall version). If not specified in the software this can drastical effects on the results and is also warned when utilizing the software. 
 
 ## Multiple steps?: 
-*Is it necessary to perform several steps to obtain the results? Is it possible to automate via scripting?*
+The main process (generating UMI-consensus sequenses) is fully automated, with additional obtions being available in different scripts/commands such as demultiplexing. 
 
 # Sharing
 ## Will you share your code? 
-*If so, in which format? Binary/bytecode and/or source? Who are the intended users? What are knowledge and skills do potential users have? What level of support do you offer? How do users now the level of support? Contact information? How will you measure	the level of usage? Should users cite a publication?*
+The software is shared via git and the intended users are fellow researchers working with bioinformatics and DNA sequencing. Support is offered via mail. 
+The software has been developed by Søren Karst and include a reference for a publication for users to cite. 
 
 ## Which publication channel? 
-*Publisher: home university platform (AAU: e.g. vbn.aau.dk), publisher, or independent organization (e.g. figshare, github,...)? DOI? Link between article and code? Is the policies of digital repository acceptable? Is the longitude? Does the platform accommodate the size of you project? Fees?*
+-
 
 ## Who should have access and who will govern access?
-*Should there be restricted access? Which criteria should be meet for sharing? Who will govern access after completion of project? Does the platform of choice allow for access governance?*
+No restrictions.
 
 ## Documentation 
-*Is the paper/article sufficient documentation? Should dependencies to other programs and record and versions of these be documented? Is it documented how to produce every figure and statistics reported in the article? Should documentation include how-to-get-started? Example of how run all the program and scripts? Are examples useful?*
+The software includes thorough documentation and example usage with example data.
 
 ## Dataset documentation and publication: 
-*Will you publish any dataset? Is it necessary to document the dataset? Does it make sense to adapt the FAIR principles for your data (benefits/)?:*
+A larger dataset is available through the publication associated with the software development.
 
 ## Licensing 
-*Should be clearly stated at the top of all relevant files. Right to copy? Right to modify? Right to distribute? Right to usage in proprietary and commercial software?*
-
+GNU General Public License.
