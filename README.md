@@ -9,17 +9,17 @@ The analysis.sh script additionally needs an argument specifying the path to the
 
 # Dependencies: python and Rscript
 Can be installed with:
-  sudp apt-get update
-  sudo apt install pyhton3
-  sudo apt install r-base-core
+ 
+ sudo apt-get update
+ 
+ sudo apt install pyhton3
+ 
+ sudo apt install r-base-core
 
 # Usage
-USAGE="bash analysis.sh
-
 Script for analyzing the distribution of different ids in in different cases from the European Court of Human Rights.
 
 usage: bash analysis.sh [-d]
 
 where:
 	-d Directory containing the case files"
-  
