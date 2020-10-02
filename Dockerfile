@@ -11,10 +11,10 @@ RUN apt-get update && \
 RUN install2.r tidyverse
 
 #copy scripts into container image
-COPY print_kpthesaurus.py analyse_and_visualize.r script.bash /sci-sw-dev-2020/
+COPY print_kpthesaurus.py analyse_and_visualize.R script.bash /sci-sw-dev-2020/
 
 WORKDIR /home/pwd
 
 #BASH script as entrypoint
-ENTRYPOINT [ "bash", "/sci-sw-dev-2020/script.bash" ]
+ENTRYPOINT [ "/sci-sw-dev-2020/script.bash" ]
 CMD ["-h"]
