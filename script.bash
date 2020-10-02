@@ -10,7 +10,7 @@ set -o nounset
 #print exactly what gets executed (useful for debugging)
 #set -o xtrace
 
-VERSION="1.0"
+VERSION="1.1"
 
 #default error message if bad usage
 usageError() {
@@ -23,33 +23,24 @@ usageError() {
 #fetch and check options provided by user
 #flags for required options, checked after getopts loop
 i_flag=0
-d_flag=0
-o_flag=0
 while getopts ":hi:d:t:vo:" opt; do
 case ${opt} in
   h )
-    echo "Some help text"
+    echo "Super awesome BASH script for the PhD course: Tools for Scientific Software Development and Data Science (fall 2020)"
     echo "Version: $VERSION"
     echo "Options:"
+    echo "  -i    A single input JSON data file"
     echo "  -h    Display this help text and exit."
     echo "  -v    Print version and exit."
-    exit 1
+    exit 0
     ;;
   i )
     input=$OPTARG
     i_flag=1
     ;;
-  d )
-    database=$OPTARG
-    d_flag=1
-    ;;
   v )
     echo "Version: $VERSION"
     exit 0
-    ;;
-  o )
-    output=$OPTARG
-    o_flag=1
     ;;
   \? )
     usageError "Invalid Option: -$OPTARG"
@@ -73,16 +64,6 @@ fi
 if [ $i_flag -eq 0 ]
 then
 	usageError "option -i is required"
-	exit 1
-fi
-if [ $d_flag -eq 0 ]
-then
-	usageError "option -d is required"
-	exit 1
-fi
-if [ $o_flag -eq 0 ]
-then
-	usageError "option -o is required"
 	exit 1
 fi
 
