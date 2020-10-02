@@ -28,7 +28,7 @@ if (length(args)==0) {
 }
 
 
-library(tidyverse)
+suppressPackageStartupMessages({require("tidyverse")})
 
 
 # Import data from json file
