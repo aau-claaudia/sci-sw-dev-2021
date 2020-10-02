@@ -83,6 +83,15 @@ echoWithTS "Running super awesome BASH script"
 echoWithTS "Version: $VERSION"
 echoWithTS "Input: $input"
 
+#extract basename of input file (without extension)
+filename=$(basename -- "$input")
+basename="${filename%.*}"
+
+echoWithTS "Extracting id's..."
+python print_kpthesaurus.py "$input" > ${basename}.csv
+
+echoWithTS "Generating distribution plot..."
+Rscript --vanilla analyse_and_visualize.R ${basename}.csv
 ##### END OF ACTUAL SCRIPT #####
 
 #print elapsed time since script was invoked
