@@ -8,84 +8,81 @@ This plan is inspired by the following [Data Management Plan](https://healthscie
 
 # Overview
 
-Project Title:
+Project Title: kpthesaurus keyword ID scanner
 
 ## Main researcher: 
-*Researcher in charge of producing the code*
+Kasper Skytte Andersen 
 
 ## Research leader: 
-*Closest researcher leader overseeing the researcher. Could be the main researcher.*
+Per Halkjær Nielsen
 
 ## Collaborators: 
-*Other researchers etc. that will have access and use the code*
+Kasper Skytte Andersen
 
 ## Project contact: 
-*Email of main researcher and research leader. Should also include name and contact for a person in-charge after the project ends if relevant*
+ksa@bio.aau.dk or phn@bio.aau.dk
 
 ## Related document(s): 
-
-Are there requirements and policies from funding agency, collaborators or institute when conducting the research? 
+None.
 
 # Planning the project
 
 ## Purpose
-*What is the purpose the scientific software? What scientific question are you trying to answer? What scientific methodology will be used?*
+The purpose of this project is to demonstrate fulfillment of the learning objectives for the super awesome PhD course "Tools for Scientific Software Development and Data Science"
 
 ## Where will code exist during project?: 
-*Can collaborators access code? How? Will there be backup?*
+On GitHub as a private repositiory. Any collaborators (internal or external) must be invited to the repository to be able to contribute.
 
 ## Software development: 
-*How will the software be developed? Following a formal guideline or ad-hoc? Will you receive peer-review of code? How will you track bugs and issues? How do you ensure your results are trustworthy?*
+The guidelines explained in this paper https://arxiv.org/abs/1609.00037 will be followed to ensure proper software development
 
 ## Programming languages:
-*Which languages will you use and why? Will you automate using scripts? Will you use Integrated Development Environments? To which extend will your toolchain be available to others and will it be free of cost? Literate programming? Is platform dependencies an issue? Coding style?*
+BASH to wrap Python and R scripts. Docker to administrate containers to ensure reproducibility and compatibility. Docker hub integrated with GitHub repository to keep it up to date. The software will be free of charge and used for anything as long as it is cited (MIT license).
 
 ## Methods: 
-*Which statistical methods are used? To which extend do you need to develop your own methods? To which extend can you use off-the-shell methods?* 
+Bayesian statistics are always good.
 
 ## Code Documentation: 
-*How will the code be documented? A single README? Documentation level of individual functions and scripts? Will it be possible and useful to have automatic generation of documentation?*
+pkgdown is a great R package to generate a static HTML documentation webpage with documentation of the R scripts used
 
 ## Testing: 
-*How will the software be tested? Will there be automatic testing? What can be tested? Systematic or ad-hoc testing? Can we test intermediate results and how? Can you compare with similar software?* 
+Could use BATS suite for testing the BASH script like with AutoTax. https://github.com/bats-core/bats-core
 
 ## Validation: 
-*To which extend is validation possible? From theory, do we know if some approaches are better/worse under a given metric and can we do the comparison?
-Is it possible to simulate following a specific model where known theoretical bounds must apply? Is it possible to simplify the model (no noise, fewer parameters, etc.) into a model where the expected result is more clear? In general, how do you ensure your results are trustworthy?*
+Output data must be identical to that in the example_output folder. 
 
 ## Code and data: 
-*How will code and data be structured in a filesystem? Are data too large to reside in e.g. a version control system? Are data so large it will reside on a different system, e.g. in a database server? Are there political, legal or ethical issues involved? What plan do you have for organization and naming ?*
+Data is small enough to fit in a GitHub repository. Files will be named accoring to entry in the European Court of Human Rights database. 
 
 ## Version control: 
-*Manually or by a version control system? Which system and why?*
+Always. And always git.
 
 # Processing data
 
 ##  Will you processing include randomness?: 
-*Can your results be reproduced? Is it beneficial to save seed? Is it okay to approximately reproduce?*
+Always a good idea to set the seed. I like 42.
 
 ## Cleaning of data: 
-*Is it necessary to pre-process data? Which methods are used? How are pre-processing documented? How do you ensure that the pre-processing is done in a transparent manner?*
+None.
 
 ## Multiple steps?: 
-*Is it necessary to perform several steps to obtain the results? Is it possible to automate via scripting?*
+Two step process. One to extract ID's, the next to plot the distribution. Two different scripts for each wrapped in a convenient and user friendly BASH script.
 
 # Sharing
 ## Will you share your code? 
-*If so, in which format? Binary/bytecode and/or source? Who are the intended users? What are knowledge and skills do potential users have? What level of support do you offer? How do users now the level of support? Contact information? How will you measure	the level of usage? Should users cite a publication?*
+Citing is a must. When development is done it will be public and free to use under the MIT license. Users must have basic Linux skill and the intented audience is researchers in academia. Issues and usage level will not be tracked.
 
 ## Which publication channel? 
 *Publisher: home university platform (AAU: e.g. vbn.aau.dk), publisher, or independent organization (e.g. figshare, github,...)? DOI? Link between article and code? Is the policies of digital repository acceptable? Is the longitude? Does the platform accommodate the size of you project? Fees?*
 
 ## Who should have access and who will govern access?
-*Should there be restricted access? Which criteria should be meet for sharing? Who will govern access after completion of project? Does the platform of choice allow for access governance?*
+Only the main researcher will administrate access of others. Private repository until development is finished. Open source code but no contributors other than those invited.
 
 ## Documentation 
-*Is the paper/article sufficient documentation? Should dependencies to other programs and record and versions of these be documented? Is it documented how to produce every figure and statistics reported in the article? Should documentation include how-to-get-started? Example of how run all the program and scripts? Are examples useful?*
+See the readme. Perhaps also https://github.com/KasperSkytte/AutoTax 
 
 ## Dataset documentation and publication: 
-*Will you publish any dataset? Is it necessary to document the dataset? Does it make sense to adapt the FAIR principles for your data (benefits/)?:*
+Example data will be provided under the MIT license. CLAAUDIA for data storage with DOI link would be awesome in the future!
 
 ## Licensing 
-*Should be clearly stated at the top of all relevant files. Right to copy? Right to modify? Right to distribute? Right to usage in proprietary and commercial software?*
-
+MIT license
