@@ -10,7 +10,7 @@ set -o nounset
 #print exactly what gets executed (useful for debugging)
 #set -o xtrace
 
-VERSION="1.1"
+VERSION="1.2"
 
 #default error message if bad usage
 usageError() {
