@@ -79,11 +79,10 @@ echoWithTS() {
 }
 
 ##### START OF ACTUAL SCRIPT #####
-echo "Version: $VERSION"
-echo "max threads: $MAX_THREADS"
-echo "input: $input"
-echo "database: $database"
-echo "output: $output"
+echoWithTS "Running super awesome BASH script"
+echoWithTS "Version: $VERSION"
+echoWithTS "Input: $input"
+
 ##### END OF ACTUAL SCRIPT #####
 
 #print elapsed time since script was invoked
