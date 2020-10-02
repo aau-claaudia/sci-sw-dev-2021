@@ -12,9 +12,6 @@ set -o nounset
 
 VERSION="1.0"
 
-#use all logical cores except 2 unless adjusted by user
-MAX_THREADS=${MAX_THREADS:-$((`nproc`-2))}
-
 #default error message if bad usage
 usageError() {
   local self=`basename "$0"`
@@ -45,9 +42,6 @@ case ${opt} in
   d )
     database=$OPTARG
     d_flag=1
-    ;;
-  t )
-    MAX_THREADS=$OPTARG
     ;;
   v )
     echo "Version: $VERSION"
