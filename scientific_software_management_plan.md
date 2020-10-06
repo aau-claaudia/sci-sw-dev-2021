@@ -8,84 +8,91 @@ This plan is inspired by the following [Data Management Plan](https://healthscie
 
 # Overview
 
-Project Title:
+Project Title: Evaluation of ecosystem-specific 16S rRNA gene database 
 
 ## Main researcher: 
-*Researcher in charge of producing the code*
+Christina Karmisholt Overgaard 
 
 ## Research leader: 
-*Closest researcher leader overseeing the researcher. Could be the main researcher.*
+Morten Simonsen Dueholm
 
 ## Collaborators: 
-*Other researchers etc. that will have access and use the code*
+Maybe our collaborators at Aarhus University 
 
 ## Project contact: 
-*Email of main researcher and research leader. Should also include name and contact for a person in-charge after the project ends if relevant*
+Main researcher and contact person: Christina Karmisholt Overgaard, mail: cko@bio.aau.dk
+Research leader: Morten Simonsen Dueholm, mail: md@bio.aau.dk 
 
 ## Related document(s): 
-
-Are there requirements and policies from funding agency, collaborators or institute when conducting the research? 
+Not relevant  
 
 # Planning the project
 
 ## Purpose
-*What is the purpose the scientific software? What scientific question are you trying to answer? What scientific methodology will be used?*
+The purpose of these R scripts is to evaluate both novelty within our ecosystem-specific soil database and the performance of our database in regards to coverage and taxonomic classification of amplicon datasets. For our analyses we are using amplicon data that is obtained using the V57 primer which is highly used when investigating this specific environment and therefor highly representative of the datasets used in this research field.  
 
 ## Where will code exist during project?: 
-*Can collaborators access code? How? Will there be backup?*
+During the project the code will  be available only on my computer and as it will only be me who is going to do the analyses and working on the code. In regards to back up, I have an external hard disc that I save my work on once a week of more if necessary and also all my files are backed up on the university OneDrive. 
 
 ## Software development: 
-*How will the software be developed? Following a formal guideline or ad-hoc? Will you receive peer-review of code? How will you track bugs and issues? How do you ensure your results are trustworthy?*
+Most of the R scripts that I am using in this project have been developed by my supervisor and then I make small changes so it fits my data. Some of the R scripts and analyses have been used in another article by my supervisor and made public available using github making it possible for reviewers to test the R scripts. If I am going to delevop R scripts using packages that I am not very familiar with I will try to get my supervisor to peer-review the code. 
+As for tracking bugs and issues, I will not be doing anything else than what R is doing if some of the code is written wrong. 
+To ensure of my results are trustworthy, I will use my knowlegde of the data am working with as well as my supervisor to discuss the outcome of my analyses, what it means and if it was as expected. If some results comes out unexpected then a more deeper investigation of the data using different methods sould be performed to ensure that the results are correct and not an error in the code. 
 
 ## Programming languages:
-*Which languages will you use and why? Will you automate using scripts? Will you use Integrated Development Environments? To which extend will your toolchain be available to others and will it be free of cost? Literate programming? Is platform dependencies an issue? Coding style?*
+I will be using R studio which is an open-source integrated development environment for R. The reason this language is used is because it is highly used in our research group and during my education so I am very familiar with it as well as my colleagues. It is also choosen because it is open-source and very well used in our researh field outside our group. There are many online environments for supports and teaching if this language. There are many packages developed for analysing out type of data. I will be using packages that are highly used outside our group such as Tidyverse and data.table as well as a package developed by people from our group, Ampvis2. Documentation for all the packages used in available online.    
 
 ## Methods: 
-*Which statistical methods are used? To which extend do you need to develop your own methods? To which extend can you use off-the-shell methods?* 
+So far no statistical methods have been use, however, it will be relevant at a later time point of my PhD.  
 
 ## Code Documentation: 
-*How will the code be documented? A single README? Documentation level of individual functions and scripts? Will it be possible and useful to have automatic generation of documentation?*
+There will be comments within the R script that will explain each step of the code and where the user should be aware of manual changes. There will also be a README file which explain each R scripts 
 
 ## Testing: 
-*How will the software be tested? Will there be automatic testing? What can be tested? Systematic or ad-hoc testing? Can we test intermediate results and how? Can you compare with similar software?* 
+Not relevant 
 
 ## Validation: 
-*To which extend is validation possible? From theory, do we know if some approaches are better/worse under a given metric and can we do the comparison?
-Is it possible to simulate following a specific model where known theoretical bounds must apply? Is it possible to simplify the model (no noise, fewer parameters, etc.) into a model where the expected result is more clear? In general, how do you ensure your results are trustworthy?*
+Not relevant. I am not using any models or systems. 
 
 ## Code and data: 
-*How will code and data be structured in a filesystem? Are data too large to reside in e.g. a version control system? Are data so large it will reside on a different system, e.g. in a database server? Are there political, legal or ethical issues involved? What plan do you have for organization and naming ?*
+Each R script will be made in according to the analyses and figure number within the article. There will also be references to the R script within the method section of the article. 
 
 ## Version control: 
-*Manually or by a version control system? Which system and why?*
+It will manual version control as it will only be me who is working on the scripts so I have made my only version control system.
 
 # Processing data
 
 ##  Will you processing include randomness?: 
-*Can your results be reproduced? Is it beneficial to save seed? Is it okay to approximately reproduce?*
+All results can be reproduced based on the method section within the article, the public avaible R scripts and datasets. No seed is necessary. 
 
 ## Cleaning of data: 
-*Is it necessary to pre-process data? Which methods are used? How are pre-processing documented? How do you ensure that the pre-processing is done in a transparent manner?*
+As I am working with sequencing data, this have to processed before the analyses can be made. We use Usearch which is a software used in linux command lines. I am using the recommended denoising pipeline and a README file is manually created with processing of each dataset where each command is documented as well as each result from the command. The processing will likewise be ducumented within the article so each step can be reproduced. 
 
 ## Multiple steps?: 
-*Is it necessary to perform several steps to obtain the results? Is it possible to automate via scripting?*
+Most parts of the R scripts are automated, however, in the beginning of each script there are some manual steps so ensure that the right datasets have been imported. 
 
 # Sharing
 ## Will you share your code? 
-*If so, in which format? Binary/bytecode and/or source? Who are the intended users? What are knowledge and skills do potential users have? What level of support do you offer? How do users now the level of support? Contact information? How will you measure	the level of usage? Should users cite a publication?*
+The code will be made public available. 
+The intended users are research within the field of microbiology, esperically ecology and the study of microorganisms and thier taxonomic classification. 
+The users has to have knowlegde about taxonomic classification and how databases work in general. They have to have knowledge about the universal databases and their contents in order to evaluate the results. They also have to have a certain understading of R and the packages we use (tidyverse, data.table, Ampvis2 ect.) in order to understand the process despite of explaining text. 
+I would offer support in that extend that the researcher using the R scripts would be able to contact me with question or comments and I would be given feedback in order to solve the problem or discuss any comments. This will be stated in the README files for the R scripts as well as in the article. This will ensure use of my work as well as fixing of potential errors or problems not found be my, my supervisor or reviewers. 
+The contact information will be given at the top of the article. 
+The users of the R scripts will be expected to cite the article. 
 
 ## Which publication channel? 
-*Publisher: home university platform (AAU: e.g. vbn.aau.dk), publisher, or independent organization (e.g. figshare, github,...)? DOI? Link between article and code? Is the policies of digital repository acceptable? Is the longitude? Does the platform accommodate the size of you project? Fees?*
+Github will be use to share all code used in this project. There will be a system to link each R script to the figures in the article. 
+The raw sequencing data will be made available at Sequence Read Archive (SRA).
 
 ## Who should have access and who will govern access?
-*Should there be restricted access? Which criteria should be meet for sharing? Who will govern access after completion of project? Does the platform of choice allow for access governance?*
+The R scripts will be made public avaible for all to use i future. 
 
 ## Documentation 
-*Is the paper/article sufficient documentation? Should dependencies to other programs and record and versions of these be documented? Is it documented how to produce every figure and statistics reported in the article? Should documentation include how-to-get-started? Example of how run all the program and scripts? Are examples useful?*
+All documentation of each analysis will be made under the method section of the article and ensure transparancy and reproducability of every analysis made in the project. 
 
 ## Dataset documentation and publication: 
-*Will you publish any dataset? Is it necessary to document the dataset? Does it make sense to adapt the FAIR principles for your data (benefits/)?:*
+All raw sequencing data sets will be made avaiable at Sequence Read Archive (SRA). This ensures reproducability of all analyses within the article as well as public use of other research within there studies. It will be made clear that with any use of the datasets a reference has to be made to the article. 
 
 ## Licensing 
-*Should be clearly stated at the top of all relevant files. Right to copy? Right to modify? Right to distribute? Right to usage in proprietary and commercial software?*
+It will be stated in each R script as well as the README file and article that any use of software produced in this project should be credited to the author of the codes. 
 
