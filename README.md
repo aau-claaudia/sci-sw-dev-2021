@@ -3,29 +3,17 @@ Hallo and welcome to this readme file which will provide information about this 
 
 ## What this can be used for?
 
-This data processing pipeline can be used to analyze some data from the European Court of Human Rights, where each document/case is tagged with some ids that corresponds to different keywords. The data processing pipeline will be looking at the distribution (how often different ids are mentioned) by two scripts. A python script that can extract the ids of each case and print the ids to stdout.
+This data processing pipeline can be used to analyze data from the European Court of Human Rights, where each document/case is tagged with ids that corresponds to different keywords. The data processing pipeline will be looking at the distribution (how often different ids are mentioned) by two scripts: A python script that can extract the ids of each case and print the ids to stdout. A R script that plot the distribution/count of different ids in a sorted form.
 
 ## How this is accomplished? / How to run the code? 
+Clone the repository into your terminal (fx Ubuntu to use Linux on a windows computer). This process is described in detail here: https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository .
 
-The scripts can be cloned into your terminal (fx Ubuntu to use Linux on a windows computer). This process is described in detail here: https://docs.github.com/en/free-pro-team@latest/github/creating-cloning-and-archiving-repositories/cloning-a-repository
+Run the bash script and the result will be made for you. 
 
-Both the python and R script can be run through the bash script. 
-
-- The python script can extract the ids of each case and prints them to stdout.
-
-  This can be done with the following code: 
-   
-  $ python print_kpthesaurus.py data/001-100865.json
-  
-
-- The R script can be run with the code mentioned below, and produce a plot of the distribution in filename.pdf: 
-
-  Rscript analyse_and_print.r filename.dat
-
-  It can be nessesary to install the r-base-core which include the Rscript command. This can be done with the following code: 
-
-  sudo apt install r-base-core
+Remember to have R and tidyverse installed. 
+Useful links:    https://linuxize.com/post/how-to-install-r-on-ubuntu-20-04/
+                  https://fahim-sikder.github.io/post/how-to-install-r-ubuntu-20/
 
 
-
-Changes in the scripts are documented with comments made continuously.
+To get a better understanding of the different steps, read the comments in the bash.sh file. 
+Changes to the script and software will be documented on git continuously.
