@@ -68,8 +68,6 @@ I have not yet used this package and need to find out how to implement it. The h
 
 ## Validation:
 - Not relevant
-*To which extend is validation possible? From theory, do we know if some approaches are better/worse under a given metric and can we do the comparison?
-Is it possible to simulate following a specific model where known theoretical bounds must apply? Is it possible to simplify the model (no noise, fewer parameters, etc.) into a model where the expected result is clearer? In general, how do you ensure your results are trustworthy? *
 
 ## Code and data: 
 The code would probably be divided in two files. One for bacteria and one for archaea, because these have individual big dataset, and the software can be slower and the code chaotic, if there is too much data and different datasets are in same files(scripts).  
