@@ -6,8 +6,6 @@ This will parse a single ECHR json file and extract one field.
 import argparse
 import json
 
-filename <- data
-
 def process(filename, pfield='kpthesaurus'):
     with open(filename, 'r') as f:
         jsondata = json.load(f)
