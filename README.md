@@ -11,9 +11,14 @@ Clone the repository into your terminal (fx Ubuntu to use Linux on a windows com
 Run the bash script and the result will be made for you. 
 
 Remember to have R and tidyverse installed. 
-Useful links:    https://linuxize.com/post/how-to-install-r-on-ubuntu-20-04/
-                  https://fahim-sikder.github.io/post/how-to-install-r-ubuntu-20/
+
+Useful links:    
+
+https://linuxize.com/post/how-to-install-r-on-ubuntu-20-04/
+
+https://fahim-sikder.github.io/post/how-to-install-r-ubuntu-20/
 
 
 To get a better understanding of the different steps, read the comments in the bash.sh file. 
+
 Changes to the script and software will be documented on git continuously.
