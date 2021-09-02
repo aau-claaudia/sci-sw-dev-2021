@@ -11,7 +11,7 @@ This plan is inspired by the following [Data Management Plan](https://healthscie
 Project Title:
 
 ## Main researcher: 
-*Researcher in charge of producing the code*
+Tobias Lindstrøm Jensen
 
 ## Research leader: 
 *Closest researcher leader overseeing the researcher. Could be the main researcher.*
