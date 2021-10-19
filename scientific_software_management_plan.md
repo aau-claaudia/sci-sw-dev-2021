@@ -8,84 +8,94 @@ This plan is inspired by the following [Data Management Plan](https://healthscie
 
 # Overview
 
-Project Title:
+## Project Title:
+The mechanical and thermal properties of oxide and hybrid glass systems.
 
 ## Main researcher: 
-*Researcher in charge of producing the code*
+Søren Strandskov Sørensen, soe@bio.aau.dk
 
 ## Research leader: 
-*Closest researcher leader overseeing the researcher. Could be the main researcher.*
+Morten M. Smedskjær, mos@bio.aau.dk
 
 ## Collaborators: 
-*Other researchers etc. that will have access and use the code*
+Other Graduates, PhDs, and PostDocs of the Oxide glass research group at Aalborg University, including:
+	- Johan F. S. Christensen
+	- Rasmus Christensen
+	- Elsebeth Pedersen
+	- Tao Du
+	- Theany To
+
+External collaborators from University of California, Los Angeles in the ParisLAB group led by Mathieu Bauchy 
 
 ## Project contact: 
-*Email of main researcher and research leader. Should also include name and contact for a person in-charge after the project ends if relevant*
+Morten M. Smedskjær, mos@bio.aau.dk
 
 ## Related document(s): 
-
-Are there requirements and policies from funding agency, collaborators or institute when conducting the research? 
+None
 
 # Planning the project
 
 ## Purpose
-*What is the purpose the scientific software? What scientific question are you trying to answer? What scientific methodology will be used?*
+The intend of the written scripts are multisided:
+	1) To produce input atomic structures for use in atomistic simulations 
+	2) Make input scripts for running atomistic simulations using open source software (LAMMPS or CP2K)
+	3) To analyze output of atomistic simulations
+The majority of code will be related to 3), but will be adapted to each specific usecase with the overall goal to obtain a deeper understanding of the dynamical and mechanical properties of the studied glassy systems.
 
 ## Where will code exist during project?: 
-*Can collaborators access code? How? Will there be backup?*
+Code will reside locally on users computers. Backups will primarily be done through cloud-services. For highly collaborative projects, cloud-services will provide sharing of scripts. Considerations of exchanging for git repo is to be considered, but may be difficult as users are not all experienced with git.
 
 ## Software development: 
-*How will the software be developed? Following a formal guideline or ad-hoc? Will you receive peer-review of code? How will you track bugs and issues? How do you ensure your results are trustworthy?*
+The software will be developed ad-hoc and extended as needed. Use cases are often highly individual and require some adaption for each specific case. Because of this, we develop base scripts for the most fundamental analysis which we trust and modify as needed. Issues and bugs will be sought to be identified early, by running simple test of systems of well-known behaviour.
 
 ## Programming languages:
-*Which languages will you use and why? Will you automate using scripts? Will you use Integrated Development Environments? To which extend will your toolchain be available to others and will it be free of cost? Literate programming? Is platform dependencies an issue? Coding style?*
+Languages for producing input and analysing output data is usually either matlab or python. This is intended to make the code accessible and minimise platform dependencies which may be hard to overcome. Example scripts will usually be provided when publishing. Input scripts for LAMMPS will be written with a special LAMMPS syntax. 
 
 ## Methods: 
-*Which statistical methods are used? To which extend do you need to develop your own methods? To which extend can you use off-the-shell methods?* 
+Only standardised statistical methods are used, yet methods of analyses will be developed on a per-need basis and will be largely configured for each specific system. Large parts of the code will rely on well-described mathematical methods of linear algebra. 
 
 ## Code Documentation: 
-*How will the code be documented? A single README? Documentation level of individual functions and scripts? Will it be possible and useful to have automatic generation of documentation?*
+Documentation will usually rely on in-line commenting for highlighting variables of interest (which will often need adjustment). Parts of code will be introduced by in-line comments to make the code accessible to others. 
 
 ## Testing: 
-*How will the software be tested? Will there be automatic testing? What can be tested? Systematic or ad-hoc testing? Can we test intermediate results and how? Can you compare with similar software?* 
+Testing will primarily rely on well-known structures/systems of well-known dynamics. Testing will be performed ad-hoc and when relevant be compared with software of other authors. 
 
 ## Validation: 
-*To which extend is validation possible? From theory, do we know if some approaches are better/worse under a given metric and can we do the comparison?
-Is it possible to simulate following a specific model where known theoretical bounds must apply? Is it possible to simplify the model (no noise, fewer parameters, etc.) into a model where the expected result is more clear? In general, how do you ensure your results are trustworthy?*
+Validation will usually rely on heavy ensemble averaging by running over large time frames and multiple independent simulation from which properties will be extracted.
 
 ## Code and data: 
-*How will code and data be structured in a filesystem? Are data too large to reside in e.g. a version control system? Are data so large it will reside on a different system, e.g. in a database server? Are there political, legal or ethical issues involved? What plan do you have for organization and naming ?*
+Code will usually reside locally and sometimes externally. Raw data, on the other hand, will usually reside on external servers and not be followed by version control due to size constraints. No legal/ethical issues may be encountered for the studied systems (glasses of various kind). 
 
 ## Version control: 
-*Manually or by a version control system? Which system and why?*
+Usually manually, but the goal is to implement git for some common scripts to keep track of adaptions for specific systems and their differences.
 
 # Processing data
 
 ##  Will you processing include randomness?: 
-*Can your results be reproduced? Is it beneficial to save seed? Is it okay to approximately reproduce?*
+Seeds will used in the initiation of simulations. Seeds will be saved in log files for easy reproduction of previous data.
 
 ## Cleaning of data: 
-*Is it necessary to pre-process data? Which methods are used? How are pre-processing documented? How do you ensure that the pre-processing is done in a transparent manner?*
+The majority of data does not need preprocessing. 
 
 ## Multiple steps?: 
-*Is it necessary to perform several steps to obtain the results? Is it possible to automate via scripting?*
+Many cases require multiple steps of data processing. This is exactly why scripting is heavily employed for nearly all tasks.
 
 # Sharing
 ## Will you share your code? 
-*If so, in which format? Binary/bytecode and/or source? Who are the intended users? What are knowledge and skills do potential users have? What level of support do you offer? How do users now the level of support? Contact information? How will you measure	the level of usage? Should users cite a publication?*
+We have previously shared example scripts of simulations with relevant commenting. For more, we offer highly detailed descriptions of simulations in published papers (in contrast to many others). Our potential users should be experienced in general simulation techniques and scripting languages (Matlab/Python). Contact information is usually given as the Corresponding Author who will be contacted first. The connection of scripts with papers also provide relations of code with papers.
 
 ## Which publication channel? 
-*Publisher: home university platform (AAU: e.g. vbn.aau.dk), publisher, or independent organization (e.g. figshare, github,...)? DOI? Link between article and code? Is the policies of digital repository acceptable? Is the longitude? Does the platform accommodate the size of you project? Fees?*
+Usually Supporting Information alongside papers. We strongly consider using github more actively. 
 
 ## Who should have access and who will govern access?
-*Should there be restricted access? Which criteria should be meet for sharing? Who will govern access after completion of project? Does the platform of choice allow for access governance?*
+When published, access is generally unrestricted and we are highly willing to share. 
 
 ## Documentation 
-*Is the paper/article sufficient documentation? Should dependencies to other programs and record and versions of these be documented? Is it documented how to produce every figure and statistics reported in the article? Should documentation include how-to-get-started? Example of how run all the program and scripts? Are examples useful?*
+We generally focus on providing highly reproducible descriptions in text of our procedures for inclusions in papers. When sharing, we usually, provide specific ready-to-use scripts for easy modification of the user. 
 
 ## Dataset documentation and publication: 
-*Will you publish any dataset? Is it necessary to document the dataset? Does it make sense to adapt the FAIR principles for your data (benefits/)?:*
+Only rarely, actual datasets are published, except for what is plotted in figures in published papers. Rather, scripts are provided for reproduction of data.
 
 ## Licensing 
-*Should be clearly stated at the top of all relevant files. Right to copy? Right to modify? Right to distribute? Right to usage in proprietary and commercial software?*
+Generally we provide our code for free modification and distribution for all non-commercial users. 
 
