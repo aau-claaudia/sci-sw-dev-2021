@@ -6,4 +6,7 @@ This repository provides several scripts in order to process data from the Europ
 Specifically, the scripts process a number of cases, and output a graph illustrating the distribution of IDs used.  
 Those IDs represent different keywords used by the European Court of Human Rights.
 
+## Requirements
 
+* **Python 3**
+* **R** with "tidyverse" package
