@@ -8,84 +8,103 @@ This plan is inspired by the following [Data Management Plan](https://healthscie
 
 # Overview
 
-Project Title:
+Project Title: "TrieDF: Efficient In-memory Indexing for Metadata-augmented RDF"
 
 ## Main researcher: 
-*Researcher in charge of producing the code*
+Olivier Pelgrin
 
 ## Research leader: 
-*Closest researcher leader overseeing the researcher. Could be the main researcher.*
+Katja Hose
 
 ## Collaborators: 
-*Other researchers etc. that will have access and use the code*
+Katja Hose, Luis Galárraga
 
 ## Project contact: 
-*Email of main researcher and research leader. Should also include name and contact for a person in-charge after the project ends if relevant*
+olivier@cs.aau.dk  
+khose@cs.aau.dk
 
 ## Related document(s): 
 
-Are there requirements and policies from funding agency, collaborators or institute when conducting the research? 
+Not relevant 
 
 # Planning the project
 
 ## Purpose
-*What is the purpose the scientific software? What scientific question are you trying to answer? What scientific methodology will be used?*
+This software aim at providing a research prototype for a an internal representation of [RDF](https://www.w3.org/RDF/) with additional metadata like versioning and provenance.
 
 ## Where will code exist during project?: 
-*Can collaborators access code? How? Will there be backup?*
+The code is located in a private gitlab repository during development of the project. All collaborator have access to the repository.   
+After publication, a public repository is made available.
 
 ## Software development: 
-*How will the software be developed? Following a formal guideline or ad-hoc? Will you receive peer-review of code? How will you track bugs and issues? How do you ensure your results are trustworthy?*
+The code will be developed solely by the main researcher. Being a prototype for a research problem, the development will be ad-hoc as features will be added or removed according to the on-going theoretical work.
+
+The core is reviewed by the collaborators of the project. 
+
+A mix of testing and reference benchmarks is used to ensure that the results are trustworthy.
 
 ## Programming languages:
-*Which languages will you use and why? Will you automate using scripts? Will you use Integrated Development Environments? To which extend will your toolchain be available to others and will it be free of cost? Literate programming? Is platform dependencies an issue? Coding style?*
+The code is written C++ because of performance constraints. Building of the code is done thanks to the [Meson](https://mesonbuild.com/index.html) build system (and a C++17 compatible compiler).  
+Any IDE with C++ support can be used to browse and edit the code.  
+The C++ code is platform agnostic and can be compiled on both Linux and Windows. The code cannot be compiled on MacOS due to "mixed" support of OpenMP.
 
 ## Methods: 
-*Which statistical methods are used? To which extend do you need to develop your own methods? To which extend can you use off-the-shell methods?* 
+No statistical methods are used.  
+However, the project includes original algorithms and data structure.
 
 ## Code Documentation: 
-*How will the code be documented? A single README? Documentation level of individual functions and scripts? Will it be possible and useful to have automatic generation of documentation?*
+A readme is provided guiding the user on how to compile and use the software.  
+Important functions of the code are documented. Tools such as [Doxygen](https://www.doxygen.nl) can be used to generate the ducumentation.  
 
 ## Testing: 
-*How will the software be tested? Will there be automatic testing? What can be tested? Systematic or ad-hoc testing? Can we test intermediate results and how? Can you compare with similar software?* 
+Unit testing is used for critical parts of the code, as well as some ad-hoc testing.  
+Reference datasets and benchmarks with known results sets are used to validate the results of the method.  
 
 ## Validation: 
-*To which extend is validation possible? From theory, do we know if some approaches are better/worse under a given metric and can we do the comparison?
-Is it possible to simulate following a specific model where known theoretical bounds must apply? Is it possible to simplify the model (no noise, fewer parameters, etc.) into a model where the expected result is more clear? In general, how do you ensure your results are trustworthy?*
+The software is validated on standard benchmarks and datasets. And is compared against other comparable software.  
+The metrics used to evaluate are the speed of data processing and exactness of the results.
 
 ## Code and data: 
-*How will code and data be structured in a filesystem? Are data too large to reside in e.g. a version control system? Are data so large it will reside on a different system, e.g. in a database server? Are there political, legal or ethical issues involved? What plan do you have for organization and naming ?*
+The code will reside in a version control system.  
+The data is from publicly available sources and can be found freely on internet.  
+The exact data used for evaluation is made available for convenience on an AAU server managed by the Research Leader.
+
+There is no political, legal or ethical issues involved.
 
 ## Version control: 
-*Manually or by a version control system? Which system and why?*
+Version control is done with Git, and the code stored on a Gitlab repository.  
+Git is chosen for it is the standard for version control of software. 
 
 # Processing data
 
 ##  Will you processing include randomness?: 
-*Can your results be reproduced? Is it beneficial to save seed? Is it okay to approximately reproduce?*
+Not relevant.
 
 ## Cleaning of data: 
-*Is it necessary to pre-process data? Which methods are used? How are pre-processing documented? How do you ensure that the pre-processing is done in a transparent manner?*
+Not relevant.
 
 ## Multiple steps?: 
-*Is it necessary to perform several steps to obtain the results? Is it possible to automate via scripting?*
+Scripts are used to automate the steps as much as possible.
 
 # Sharing
 ## Will you share your code? 
-*If so, in which format? Binary/bytecode and/or source? Who are the intended users? What are knowledge and skills do potential users have? What level of support do you offer? How do users now the level of support? Contact information? How will you measure	the level of usage? Should users cite a publication?*
+The code is shared as source. Users are other members of the research community. Support is limited, but everyone is welcome to open an issue on Gitlab or contact authors via email.  
+Users are expected to cite the publication if they include the method in another research work.  
 
 ## Which publication channel? 
-*Publisher: home university platform (AAU: e.g. vbn.aau.dk), publisher, or independent organization (e.g. figshare, github,...)? DOI? Link between article and code? Is the policies of digital repository acceptable? Is the longitude? Does the platform accommodate the size of you project? Fees?*
+The publication will be made available through vbn.aau.dk when published, and will also be available on the publisher's platform. The publication include a link to the code and data.  
+
 
 ## Who should have access and who will govern access?
-*Should there be restricted access? Which criteria should be meet for sharing? Who will govern access after completion of project? Does the platform of choice allow for access governance?*
+Not relevant.
 
 ## Documentation 
-*Is the paper/article sufficient documentation? Should dependencies to other programs and record and versions of these be documented? Is it documented how to produce every figure and statistics reported in the article? Should documentation include how-to-get-started? Example of how run all the program and scripts? Are examples useful?*
+The article and code documentation should be enough to understand and use the project.  
+Readme explain how to use the code, and detail the list of dependencies. Additionally, a Dockerfile will be made available in the near future to help reproducability.  
+Scripts exist to run the code and produce the figures included in the paper. Each script is documented on its inputs and outputs.
 
 ## Dataset documentation and publication: 
-*Will you publish any dataset? Is it necessary to document the dataset? Does it make sense to adapt the FAIR principles for your data (benefits/)?:*
+Not relevant.
 
 ## Licensing 
-*Should be clearly stated at the top of all relevant files. Right to copy? Right to modify? Right to distribute? Right to usage in proprietary and commercial software?*
-
+The code is licensed according to the [MIT License](https://en.wikipedia.org/wiki/MIT_License).
