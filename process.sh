@@ -12,3 +12,4 @@ for file in $data_files; do
 done
 
 Rscript ./analyse_and_visualize.r "$1.dat"
+rm "$1.dat"
