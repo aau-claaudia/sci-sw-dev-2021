@@ -1,5 +1,5 @@
 if [ -z "$1" ]; then
-    echo "Usage $0 output_filename"
+    echo "Usage: $0 output_filename"
     exit
 fi
 
@@ -10,3 +10,5 @@ for file in $data_files; do
     name=$(echo "$file" | sed -E 's/\.\/data\/(.+).json/\1/')
     echo "$name;$ids" >> "$1.dat"
 done
+
+Rscript ./analyse_and_visualize.r "$1.dat"
