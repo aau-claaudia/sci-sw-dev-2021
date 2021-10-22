@@ -10,3 +10,13 @@ Those IDs represent different keywords used by the European Court of Human Right
 
 * **Python 3**
 * **R** with "tidyverse" package
+
+## Usage
+
+In order to process the data and output the distribution graph, run:
+```bash
+./process.sh some_name
+```
+The script take a single parameter, used to name the graph file.  
+The script run the data processing and graph generation automatically.
+
