@@ -1,8 +1,11 @@
 !/bin/bash
-DATFILE=filename.dat
+# Set the first Variable FOR DAT FILE
+DATFILE=RDATAFILE.dat
+# Set the second variable FOR TXT FILE
 TXTFILE=numbers.txt
+# If the files exists already then delete them first to get exact number of lines required as we are appending lines
 if test -f "$DATFILE"; then
-        $(rm filename.dat)
+        $(rm RDATAFILE.dat)
 fi
 if test -f "$TXTFILE"; then
         $(rm numbers.txt)
