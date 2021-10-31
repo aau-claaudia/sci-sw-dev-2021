@@ -11,8 +11,8 @@ There are two tools:
 1. A python script that can extract the IDs of each case and print the IDs to standard output.
 
 Example run:
-$ python print_kpthesaurus.py data/001-100865.json
-448;30;481;343;216
+*$ python print_kpthesaurus.py data/001-100865.json
+448;30;481;343;216*
 
 where the ID numbers then are 448, 30, 481, 343, and 216.
 
@@ -24,7 +24,7 @@ where the ID numbers then are 448, 30, 481, 343, and 216.
 and produce a plot of the distribution/count of different IDs in a sorted form. The R script
 can be executed using e.g.
 
-Rscript analyse_and_print.r filename.dat
+*Rscript analyse_and_print.r filename.dat*
 
 and produces a plot of the distribution in “ﬁlename.pdf”.
 
