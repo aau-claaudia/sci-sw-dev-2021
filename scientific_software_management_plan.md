@@ -27,11 +27,14 @@ Riccardo Riva, Researcher, Department of Wind Energy, Technical University of De
 *Email of main researcher and research leader. Should also include name and contact for a person in-charge after the project ends if relevant*
 
 Chandramouli Santhanam - chsa@es.aau.dk
+
 Torben Knudsen - tk@es.aau.dk
+
 Other contacts - N/A
 ## Related document(s): 
 
 Are there requirements and policies from funding agency, collaborators or institute when conducting the research? 
+
 There is a data confidentiality condition that restricts the data sharing to project collaborators only. 
  
 # Planning the project
@@ -39,8 +42,8 @@ There is a data confidentiality condition that restricts the data sharing to pro
 ## Purpose
 *What is the purpose of the scientific software? What scientific question are you trying to answer? What scientific methodology will be used?*
 
-The software is just a collection of ad-hoc python scripts that will be used to analyse data from the results of wind turbine simulations.
-The codes as such do not have a single scientific question that is being tried to answer but answer a broad range of questions related to wind turbine stability.  
+The software is just a collection of ad-hoc python and MATLAB scripts that will be used to analyse data from the results of wind turbine simulations.
+The codes as such do not have a single scientific question that is being tried to answer but answer a broad range of questions related to wind turbine stability. 
 The methodologies used are related to concepts of system identification, machine learning and time series analysis. 
 
 ## Where will code exist during project?: 
@@ -96,7 +99,7 @@ There are no political , legal or ethical issues involved as the data is shared 
 ## Version control: 
 *Manually or by a version control system? Which system and why?*
 
-Version control is done using Git. Because the project collaborators are familiar with the system and facilitates easy collbaoration. 
+Version control is done using Git. Because the project collaborators are familiar with the system and facilitates easy collaboration. 
 
 # Processing data
 
@@ -144,8 +147,7 @@ Editing is restricted to the PhD student, supervisor and other collaborators.
 ## Documentation 
 *Is the paper/article sufficient documentation? Should dependencies to other programs and record and versions of these be documented? Is it documented how to produce every figure and statistics reported in the article? Should documentation include how-to-get-started? Example of how run all the program and scripts? Are examples useful?*
 
-the paper should be sufficient documentation. 
-Other context relevant documentation will be available in the readme file or in the docstrings and inline comments.
+The paper should be sufficient documentation. Other context relevant documentation will be available in the readme file or in the docstrings and inline comments.
 
 ## Dataset documentation and publication: 
 *Will you publish any dataset? Is it necessary to document the dataset? Does it make sense to adapt the FAIR principles for your data (benefits/)?:*
