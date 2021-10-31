@@ -72,7 +72,7 @@ Most methods used are available in existing libraries and hence can be used off-
 *How will the code be documented? A single README? Documentation level of individual functions and scripts? Will it be possible and useful to have automatic generation of documentation?*
 
 Code will be documented with docstrings and inline comments.
-Since the ocde is used in ad-hoc basis, generating regular documentation is not benficial.  
+Since the code is used in ad-hoc basis, generating regular documentation is not benficial.  
 
 ## Testing: 
 *How will the software be tested? Will there be automatic testing? What can be tested? Systematic or ad-hoc testing? Can we test intermediate results and how? Can you compare with similar software?* 
