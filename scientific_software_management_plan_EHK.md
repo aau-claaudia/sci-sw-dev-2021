@@ -7,36 +7,27 @@ The texts in italic is inserted to provide guidance. Some parts may not be valid
 This plan is inspired by the following [Data Management Plan](https://healthsciences.ku.dk/research/responsible-conduct-of-research/SUND_Data_Management_Plan_Template_Final.docx/SUND_Data_Management_Plan_Template_Final.docx) and [Software Management Plan](https://doi.org/10.5281/zenodo.2159713)
 
 # Overview
-
 Project Title: Data Analysis regarding human right death penalty importance
 
 ## Main researcher: 
-*Researcher in charge of producing the code*
 Esther Hahyeon Kim 
 
 ## Research leader: 
-*Closest researcher leader overseeing the researcher. Could be the main researcher.*
 Esther Hahyeon Kim
 
 ## Collaborators: 
-*Other researchers etc. that will have access and use the code*
-Esther Hahyeon Kim, Hosung Yoon, Martijn Goorden
+Esther Hahyeon Kim, Hosung Yoon, Martijn Goorden, Shiraj Arora (The persons written here is working for same project with me) 
 
 ## Project contact: 
-*Email of main researcher and research leader. Should also include name and contact for a person in-charge after the project ends if relevant*
 hki@cs.aau.dk 
 
 ## Related document(s):
-Are there requirements and policies from funding agency, collaborators or institute when conducting the research? 
-The Parties shall be responsible for its own direct and/or indirect costs related to the Project activities. However, the
-DIREC Partners taking part in the Project will receive funding under the IA. If a Project Partner (other than the DIREC
-Partners) receives financial support under the funding granted by the Innovation Fund Denmark to the DIREC, said Project
-Partner shall enter into an Accession Agreement to the IA.
+As the participant of DIREC project,  the project will receive financial funding under the IA. 
+The financial support under the funding granted by the Innovation Fund Denmark to the DIREC, said Project Partner shall enter into an Accession Agreement to the IA.
 
 # Planning the project
 
 ## Purpose
-*What is the purpose the scientific software? What scientific question are you trying to answer? What scientific methodology will be used?*
 This is for analysing the data from human right, especially regarding death penalty perspective. With the software, it will extract importance rankings from the whole json file folders, and will extract only id and importance rankings.
 
 ## Where will code exist during project?: 
