@@ -64,4 +64,4 @@ Chart:
 
 #### Part B:
 
-I have created a software management plan for my PhD. You can find it [here](https://github.com/Kashif-Rabbani/sci-sw-dev-2021/blob/master/scientific_software_management_plan.md). 
+I have created a software management plan for my PhD. You can find it [here](https://github.com/Kashif-Rabbani/sci-sw-dev-2021/blob/kashif-rabbani/scientific_software_management_plan.md). 
