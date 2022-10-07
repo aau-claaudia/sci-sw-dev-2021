@@ -22,8 +22,8 @@ sturdy abroad.
 
 ## Project contact:
 
-- Prof. Katja Hose <khose@cs.aau.dk>
-- Kashif Rabbani private: <ch.kashirabbani@gmail.com>, work <kashifrabbani@cs.aau.dk>
+- Prof. Katja Hose 
+- Kashif Rabbani 
 
 ## Related document(s):
 
