@@ -3,6 +3,8 @@
 # executes the sci-sw-dev project
 # output is the pdf file ID_data.pdf illustrating the distribution of ID-apperances
 #
+# run as: $ ./runme.sh
+#
 # Needs:
 # 	- data folder named 'data' with .json files
 # 	- R-script 'analyse_and_visualize.r'
