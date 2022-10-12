@@ -6,4 +6,6 @@ touch ID_data.txt 	# create file for storing ID's
 output=$((python print_kpthesaurus.py data/001-100865.json) 2>&1)
 filename="001-100865;"
 echo "$filename$output" >> ID_data.txt
+echo "$filename$output" >> ID_data.txt
 
+Rscript analyse_and_visualize.r ID_data.txt
