@@ -11,7 +11,7 @@
 # 	- Python-script 'print_kpthesaurus.py'
 #
 # written by Mikkel van Binsbergen-Galán, mbg@energy.aau.dk
-# free to use, modify and redistribute
+# License: CC BY 4.0
 #
 # last update: 12/10-22 (mbg)
 

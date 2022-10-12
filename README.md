@@ -1,5 +1,7 @@
 # sci-sw-dev-2022
 Repository for projects in the PhD course Tools for Scientific Software Development and Data Science
+License: CC BY 4.0
+
 
 ## What is this
 This project analyses the instances of specific ID's in a number of .json files stored in /data/ and produces a graph that illustrates the number of instances. 
