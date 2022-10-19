@@ -22,6 +22,22 @@ The package was developed in collaboration with Rasmus Brøndum (mail)
 
 The package was published along with an article in [The Journal of Open Source Software](https://joss.theoj.org/papers/10.21105/joss.01593)
 
+and can be cited as:
+
+```
+@article{Børty2019, 
+  doi = {10.21105/joss.01593}, 
+  url = {https://doi.org/10.21105/joss.01593}, 
+  year = {2019}, 
+  publisher = {The Open Journal}, 
+  volume = {4}, number = {41}, 
+  pages = {1593}, 
+  author = {Lars Børty and Rasmus Brøndum and Martin Bøgsted}, 
+  title = {ccostr: An R package for estimating mean costs with censored data}, 
+  journal = {Journal of Open Source Software} 
+  }
+```
+
 ***
 
 # Planning the project
@@ -35,9 +51,9 @@ All code is freely available in the github repository, where all development is 
 ## Software development: 
 The package was develpoed ad-hoc, and errors/problems can be adressed through github. There is an attatched code of conduct in the repository that covers all participating in the project. 
 
-Anyone is allowed to make pull-requests, but only maintainer/developers have permission to accept requests.
+- Anyone is allowed to make pull-requests, but only maintainer/developers have permission to accept requests.
 
-The code includes unit tests to verity basic properties along with agreement with the previous published implementations in SAS/Stata. although notice that a few tests return different results, we do not know whether  
+- The code includes unit tests to verity basic properties along with agreement with the previous published implementations in SAS/Stata. although notice that a few tests return different results. This is due to differences in implementation, but we suspect that there is a problem in the SAS version of the implementation.  
 
 ## Programming languages:
 
