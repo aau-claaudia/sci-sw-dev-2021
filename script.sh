@@ -1,0 +1,1 @@
+python print_kpthesaurus.py data/001-100865.json
