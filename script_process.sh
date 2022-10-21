@@ -8,9 +8,9 @@ do
         docid=${docid%.*}
         
 	legal_ID= python print_kpthesaurus.py $file
+	var_toprint ="${docid};${legal_ID}" 
 	
-	
-	echo ${docid}$";"${legal_ID} 
+	echo ${var_toprint// /}
 	
 done)
 
