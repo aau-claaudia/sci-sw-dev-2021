@@ -8,8 +8,6 @@ if [ -f output_frequency.json ] && [ -s output_frequency.json ]  #If the file wi
 	
 	echo "Data is being processed"
 
-        touch output_frequency.json 	
-	> output_frequency.json
 
 
 	for file in ./data/*.json
