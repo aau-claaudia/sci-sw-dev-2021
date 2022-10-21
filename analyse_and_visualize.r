@@ -17,7 +17,6 @@
 #
 #  Will save the result in a plot with filename.pdf
 #
-
 args = commandArgs(trailingOnly=TRUE)
 
 # test if there is at least one argument: if not, return an error
@@ -40,6 +39,7 @@ dftidy <- df %>%
        drop_na("id")
 
 
+
 p <- dftidy %>%
   group_by(id) %>%
   summarize(Count=n()) %>%
@@ -55,4 +55,6 @@ p <- dftidy %>%
 
 plot_filename = paste(unlist(strsplit(filename, "\\."))[1], ".pdf", sep="")
 
+
 ggsave(plot_filename, p)
+
