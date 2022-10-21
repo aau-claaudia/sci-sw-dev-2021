@@ -13,11 +13,10 @@ def process(filename, pfield='kpthesaurus'):
         print(jsondata[pfield])
 
     
-if __name__ == '__main__':
-    parser = argparse.ArgumentParser(description='Process a single ECHR file.')
-    parser.add_argument('filename', type=str,
-                    help='filename')
+parser = argparse.ArgumentParser(description='Process a single ECHR file.')
+parser.add_argument('filename', type=str,
+                help='filename')
 
-    args = parser.parse_args()
+args = parser.parse_args()
 
-    process(args.filename)
+process(args.filename)

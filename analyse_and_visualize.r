@@ -17,6 +17,7 @@
 #
 #  Will save the result in a plot with filename.pdf
 #
+# install.packages("tidyverse", repos = "http://cran.us.r-project.org")
 
 args = commandArgs(trailingOnly=TRUE)
 
