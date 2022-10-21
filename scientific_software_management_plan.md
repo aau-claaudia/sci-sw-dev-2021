@@ -8,7 +8,7 @@ This plan is inspired by the following [Data Management Plan](https://healthscie
 
 # Overview
 
-Project Title:
+Project Title: Analysis of cases from the European Court of Human Rights
 
 ## Main researcher: 
 *Pierre Jouannais*
@@ -29,16 +29,16 @@ Are there requirements and policies from funding agency, collaborators or instit
 # Planning the project
 
 ## Purpose
-*I am trying to visualize the frequency of some legal IDs across some records from the European Court of Human Rights. To do so, we will combine a pytho ncode to extract IDs from the original files, and a R file to plot distributions after the processing by python.*
+*I want to visualize the frequency of some legal IDs across some records from the European Court of Human Rights. To do so, we will combine a python code to extract IDs from the original files, and a R file to plot distributions after the processing by python.*
 
 ## Where will code exist during project?: 
 *The data is hosted on a forked github repository and locally on the main researcher's hard drive.*
 
 ## Software development: 
-*How will the software be developed? Following a formal guideline or ad-hoc? Will you receive peer-review of code? How will you track bugs and issues? How do you ensure your results are trustworthy?*
+*Try and error and manual testing along the process.*
 
 ## Programming languages:
-*Python will be used to extract IDs from case files and R to plot distributions from after ID extraction. A unique bash script will chain both processes to yield the figures.*
+*Python will be used to extract IDs from case files and R to plot distributions from after ID extraction. A unique bash script will chain both processes to plot and save results.*
 
 ## Methods: 
 *Not relevant* 
@@ -81,11 +81,11 @@ Is it possible to simulate following a specific model where known theoretical bo
 *The project is fully public.*
 
 ## Documentation 
-*Is the paper/article sufficient documentation? Should dependencies to other programs and record and versions of these be documented? Is it documented how to produce every figure and statistics reported in the article? Should documentation include how-to-get-started? Example of how run all the program and scripts? Are examples useful?*
+*The results are provided in the repository and they can be reproduced by executing the bash script*
 
 ## Dataset documentation and publication: 
-*Will you publish any dataset? Is it necessary to document the dataset? Does it make sense to adapt the FAIR principles for your data (benefits/)?:*
+*The dataset is public and the source will be indicated.*
 
 ## Licensing 
-*Should be clearly stated at the top of all relevant files. Right to copy? Right to modify? Right to distribute? Right to usage in proprietary and commercial software?*
+*CC*
 
