@@ -3,7 +3,7 @@
 Main author: Pierre Jouannais
 pijo@plan.aau.dk
 
-This repository contains the the scripts and the data to visualize the frequencies of the different legal IDs in recorded cases from the European Court of Human Rights.
+This repository contains the scripts and the data to visualize the frequencies of the different legal IDs in recorded cases from the European Court of Human Rights.
 
 
 
@@ -25,7 +25,7 @@ This repository contains the the scripts and the data to visualize the frequenci
 + **_output_frequency.pdf_**: The final pdf resulting from the process on which can be seen the frequencies.
 
 ## Requirements
-+ R and python functioning versions. (R>4.1.3) (python > 3.4)
++ R and python functioning versions. (R>4.1.3) (python>3.4)
 + R added to the PATH so that the command Rscript can be called from the folder.
 +Tidyverse package installed for R.
 
