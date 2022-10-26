@@ -24,7 +24,7 @@ Thanks Yubo Wang help for this project, including enhancing my understanding of 
 pengw@es.aau.dk Peng Wang
 
 ## Related document(s): 
-No
+not relevant I think
 
 # Planning the project
 
