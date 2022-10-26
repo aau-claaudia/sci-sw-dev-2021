@@ -58,7 +58,7 @@ The languages I use are python and matlab, which are very easy to get used to. I
 ## Methods: 
 *Which statistical methods are used? To which extend do you need to develop your own methods? To which extend can you use off-the-shell methods?* 
 
-standardised statistical methods and some transformations of the data. At the moment I don't have much need to develop some methods myself.
+Standardised statistical methods and some transformations of the data. At the moment I don't have much need to develop some methods myself.
 
 
 
