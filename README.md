@@ -24,7 +24,7 @@ Print the json 'itemid' and 'kpthesaurus' data, and store them as print_result.t
 
 2. analyse_and_visualize.r is the R code. Which use .txt to get .pdf result.
 
-# Library Codes//
+# Library Codes
 3. print_kpthesaurus.py is the code to get json 'kpthesaurus' results. I added a few contents to it, including printing the 'itemid' and 'kpthesaurus' results and save them as .txt.
 
 
