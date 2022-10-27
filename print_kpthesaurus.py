@@ -23,7 +23,6 @@ def process(filename, pfield='kpthesaurus', pfield2='itemid'):
         fw = open("./print_result.txt", 'a')  # location to store txt file
         a= str(jsondata[pfield2])+ ";"+ str(jsondata[pfield])
         fw.write( a )         
-        # 换行
         fw.write("\n") 
 
 
