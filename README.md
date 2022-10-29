@@ -35,7 +35,7 @@ This repository contains the scripts and the data to visualize the frequencies o
 Executing **_script_process.sh_** &#128680;**from the folder**&#128680; will:
 
 + *If the data has never been processed*:
-  - Create an intermediary output json file       **_output_distributions.json_** in the folder. 
+  - Create an intermediary output json file  **_output_distributions.json_** in the folder. 
   - Feed this input to the R script and saves the output under **_output_distributions.pdf_**.
 
 + *If the data has previously been processed and the intermediary json file is full*: 
